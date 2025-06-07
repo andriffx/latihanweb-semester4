@@ -1,14 +1,12 @@
 @import "tailwindcss";
 
-*, *::before, *::after {
+/* *, *::before, *::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+} */
 
 img {
-    width: 100%;
-    height: auto;
     transition: .3s ease all;
     -webkit-transition: .3s ease all;
     -moz-transition: .3s ease all;
