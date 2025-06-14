@@ -1,3 +1,4 @@
+import { getAnimeResponse } from "@/app/libs/api-libs";
 import AnimeList from "@/components/AnimeList";
 import Header from "@/components/AnimeList/Header";
 
@@ -6,10 +7,9 @@ const Page = async ({ params }) => {
 
   const decodedKeyword = decodeURI(keyword)
 
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/anime?q=${decodedKeyword}`
-  );
-  const searchAnime = await response.json();
+  // narik api dari api-libs.js dengan parameter (resources, query)
+  const fetchSearch = await getAnimeResponse("anime", `q=${decodedKeyword}`)
+  const searchAnime = fetchSearch
 
   return (
     <>

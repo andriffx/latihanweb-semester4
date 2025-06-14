@@ -1,44 +1,44 @@
 const Pagination = ({ page, lastPage, setPage }) => {
-    const scrollTop = () => {
-        scrollTo({
-            behavior: "smooth",
-            top: 0
-        })
-    }
+  const scrollTop = () => {
+    scrollTo({
+      behavior: "smooth",
+      top: 0,
+    });
+  };
 
   const handleNextPage = () => {
     setPage((prevState) => prevState + 1);
-    scrollTop()
+    scrollTop();
   };
 
   const handlePrevPage = () => {
-    if (page <=1 ) {
-        alert("Sudah Cukup Ges!")
-        return
-    }
-
     setPage((prevState) => prevState - 1);
-    scrollTop()
+    scrollTop();
   };
 
   return (
     <div className="flex justify-center items-center py-4 px-2 gap-4 text-color-primary text-2xl">
-      <button onClick={handlePrevPage} className="transition-all hover:text-color-accent cursor-pointer">
-        Prev
-      </button>
+      {page <= 1 ? null : (
+        <button
+          onClick={handlePrevPage}
+          className="transition-all hover:text-color-accent cursor-pointer"
+        >
+          Prev
+        </button>
+      )}
       <p>
         {page} of {lastPage}
       </p>
-      <button onClick={handleNextPage} className="transition-all hover:text-color-accent cursor-pointer">
-        Next
-      </button>
+      {page >= lastPage ? null : (
+        <button
+          onClick={handleNextPage}
+          className="transition-all hover:text-color-accent cursor-pointer"
+        >
+          Next
+        </button>
+      )}
     </div>
   );
-  if(page<1) {
-    return (
-        alert("tidak ada page lagi")
-    )
-  }
 };
 
 export default Pagination;
