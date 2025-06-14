@@ -15,3 +15,7 @@
 <h1>Sesi4-Done</h1>
 <p>-Pagination Core Logic, Decode URI and JSX Files serta validasi untuk membatasi page agar tidak kurang dari page 1 jadi tidak akan ke page 0, -1, -2 dst.</p>
 <p></p>
+
+<h1>Sesi5-Done</h1>
+<p>-Reusable API call, halaman detail Anime+ youtube trailer.</p>
+<p></p>
