@@ -13,7 +13,7 @@ const InputSearch = () => {
     const keyword = searchRef.current.value;
 
     // validasi apakah keyword kosong/tidak berisi
-    if(!keyword) {
+    if(!keyword.trim()) {
       alert("Mohon masukkan kata kunci sebelum mencari!")
       return
     }

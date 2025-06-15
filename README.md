@@ -19,3 +19,11 @@
 <h1>Sesi5-Done</h1>
 <p>-Reusable API call, halaman detail Anime+ youtube trailer.</p>
 <p></p>
+
+<h1>Sesi6-Done</h1>
+<p>-Fitur rekomendasi anime.</p>
+<p></p>
+
+<h1>Sesi7-Done</h1>
+<p>-Fitur Randomize anime data dengan logika, fix minor issue di fitur pencarian(bisa search walau hanya spasi isinya).</p>
+<p></p>
